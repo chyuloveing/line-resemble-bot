@@ -11,8 +11,8 @@ app.use(express.static(__dirname));
 // LINE 設定
 // ======================
 const config = {
-  channelAccessToken: "4fzSRWyktRXZRaCyVwa9Q2LFRKhhH2EsT/BUWFwvkwFMt1AUPwPHwY6yyEiIfiPjnicNbcHL5QkRbrlMolc84oVQIyjkPeAT5SVnpEZFmwrXSO9Vzp64HuXHIITYNP29LC46xPV6SGyRrEcTvq/T7AdB04t89/1O/w1cDnyilFU=",
-  channelSecret: "0bb67bfb1ed39670160b18c99a99fc7f",
+ channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN,
+  channelSecret: process.env.CHANNEL_SECRET,
 };
 
 const client = new line.Client(config);
