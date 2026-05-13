@@ -5,6 +5,8 @@ const compareImages = require("./compare");
 
 const app = express();
 
+app.use("/output", express.static("output"));
+
 app.use(express.static(__dirname));
 
 // ======================
@@ -90,7 +92,7 @@ async function handleEvent(event) {
         const result = await compareImages(img1, img2);
 
         const baseUrl = "https://plexiglas-rifling-hurry.ngrok-free.dev";
-        const imageUrl = `${baseUrl}/${result.path}`;
+        const imageUrl = `${baseUrl}/output/${result.filename}`;
 
         userImages[userId] = [];
 
