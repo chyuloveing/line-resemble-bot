@@ -91,7 +91,7 @@ async function handleEvent(event) {
 
         const result = await compareImages(img1, img2);
 
-        const baseUrl = "https://plexiglas-rifling-hurry.ngrok-free.dev";
+        const baseUrl = "https://line-resemble-bot.onrender.com";
         const imageUrl = `${baseUrl}/output/${result.filename}`;
 
         userImages[userId] = [];
